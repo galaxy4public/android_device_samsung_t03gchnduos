@@ -17,7 +17,7 @@
 # Include common makefile
 $(call inherit-product, device/samsung/smdk4412-common/common.mk)
 
-LOCAL_PATH := device/samsung/n7100
+LOCAL_PATH := device/samsung/t03gchnduos
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -99,4 +99,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 
-$(call inherit-product-if-exists, vendor/samsung/n7100/n7100-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/t03gchnduos/t03gchnduos-vendor.mk)

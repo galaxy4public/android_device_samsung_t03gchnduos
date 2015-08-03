@@ -19,25 +19,28 @@
 
 -include device/samsung/smdk4412-common/BoardCommonConfig.mk
 
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 11408506880
+
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6262
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/n7100/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/t03gchnduos/include
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n7100/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t03gchnduos/bluetooth
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_n7100_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_t03gchnduos_defconfig
 BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 androidboot.selinux=permissive
 
 # ril
-BOARD_RIL_CLASS := ../../../device/samsung/n7100/ril/telephony/java
+BOARD_RIL_CLASS := ../../../device/samsung/t03gchnduos/ril/telephony/java
 
 # Selinux
 #BOARD_SEPOLICY_DIRS := \
-    device/samsung/n7100/selinux
+    device/samsung/t03gchnduos/selinux
 
 #BOARD_SEPOLICY_UNION := \
     device.te \
@@ -53,16 +56,16 @@ BOARD_RIL_CLASS := ../../../device/samsung/n7100/ril/telephony/java
     wpa_supplicant.te
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := t03g,n7100,GT-N7100
+TARGET_OTA_ASSERT_DEVICE := t03gchnduos,n7102,GT-N7102
 
 # inherit from the proprietary version
--include vendor/samsung/n7100/BoardConfigVendor.mk
+-include vendor/samsung/t03gchnduos/BoardConfigVendor.mk
 
 # Blobs
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/n7100/rootdir/fstab.smdk4x12
+TARGET_RECOVERY_FSTAB := device/samsung/t03gchnduos/rootdir/fstab.smdk4x12
 RECOVERY_FSTAB_VERSION := 2
 
 # Camera wrapper
